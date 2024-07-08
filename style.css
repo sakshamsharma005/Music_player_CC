@@ -1,0 +1,113 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+ }
+ 
+ html,body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(127, 107, 107);
+ }
+ 
+ .container{
+    height: 100%;
+    width:100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .song-list{
+     height: auto;
+     width: auto;
+     background-color: rgb(125, 110, 110);
+     border: 0.5px solid gray;
+     border-radius: 10px;
+     border: 2px solid rgb(13, 13, 13);
+     margin-right: 100px;
+     padding: 20px;
+     font-size: xx-large;
+
+ }
+
+.song-list li{
+    list-style: none;
+    margin-left: 8px;
+}
+
+.song-list li:hover{
+    color: white;
+    cursor: pointer;
+}
+ 
+ 
+ .music-player{
+     height: auto;
+     width: auto;
+     background-color: rgb(125, 110, 110);
+     border: 0.5px solid gray;
+     border-radius: 10px;
+     text-align: center;
+     border: 0.5px solid rgb(100, 94, 105);
+ }
+ 
+ nav{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 30px;
+ }
+ 
+ nav .icons{
+     border-radius: 50%;
+     height: 40px;
+     width: 40px;
+     line-height: 40px;
+     text-align: center;
+     color: aliceblue;
+     margin: 10px;
+     font-size: 30px;
+     border: 0.5px solid white;
+     background-color: gray;
+ }
+ 
+ .music-player h1{
+     font-size: xx-large;
+     font-family: 'Gill Sans';
+     margin: 10px;
+ }
+ 
+ .music-player p{
+     font-size: large;
+     font-family: 'Gill Sans';
+     margin: 10px;
+ }
+ 
+ .music-player audio{
+     font-size: large;
+     font-family: 'Gill Sans';
+     margin: 20px;
+ }
+
+ .controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+ }
+ .controls div{
+    cursor: pointer;
+ }
+
+ @media screen and (max-width: 700px) {
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+
+  }  
+.song-list{
+    margin-top: 40px;
+    margin-right: 0px;
+}
+}

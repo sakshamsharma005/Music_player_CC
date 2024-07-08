@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="container">    
+        <div class="song-list">
+            <ul>
+                <li id="song-1">Kya mujhe pyaar hai</li>
+                <li id="song-2">Dil Kyun Yeh Mera</li>
+                <li id="song-3">Tere Liye</li>
+                <li id="song-4">Brown Rang</li>
+                <li id="song-5">Amplifier</li>
+                <li id="song-6">Dil Ibaadat</li>
+                <li id="song-7">My Dil Goes Mmmm</li>
+                <li id="song-8">Jee le Zara</li>
+                <li id="song-9">Satisfya</li>
+                <li id="song-10">Tum hi ho</li>
+            </ul>
+        </div>
+         <div class="music-player">
+            <nav>
+                <div class="icons">
+                <i class="ri-menu-line"></i>
+                </div>
+                <div class="icons">
+                    <i class="ri-search-2-line"></i>
+                </div>
+            </nav>
+            <img src="resources/kk.png" height="240px" width="240px" id="song-image" >
+            <h1 id="song-title">Kya Mujhe Pyaar Hai</h1>
+            <p id="song-credits">KK,  Album - Woh Lamhe</p>
+            <audio id="audio" controls >
+                <source id="song-src" src="resources/128-Kya Mujhe Pyaar Hai - Woh Lamhe 128 Kbps.mp3" type="audio/mpeg" >
+            </audio>
+            <div class="controls">
+                <div><i class="ri-skip-left-fill"></i></div>
+                <div onclick="playPause()"><i class="ri-play-fill" id="ctrlICON"></i></div>
+                <div><i class="ri-skip-right-fill"></i></div>
+            </div>
+         </div>
+      </div>
+    <script src="script.js"></script>
+    <script>
+        let ctrlICON = document.getElementById("ctrlICON");
+        let song = document.getElementById("audio");
+        function playPause(){
+            if(ctrlICON.classList.contains("play-fill")){
+             song.pause();
+            ctrlICON.classList.remove("play-fill");
+            ctrlICON.classList.add("pause-line");
+            }
+            else{
+                song.play();
+                ctrlICON.classList.remove("pause-line");
+                ctrlICON.classList.add("play-fill");
+                
+            }
+        }
+    </script>
+</body>
+</html>
